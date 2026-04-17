@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Scroll-triggered fade-in-up animation */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.animate-on-scroll.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger helpers */
+.stagger-1 { transition-delay: 80ms; }
+.stagger-2 { transition-delay: 160ms; }
+.stagger-3 { transition-delay: 240ms; }
+.stagger-4 { transition-delay: 320ms; }
+.stagger-5 { transition-delay: 400ms; }
+.stagger-6 { transition-delay: 480ms; }
+
+/* Hero phone float */
+@keyframes floatPhone {
+  0%, 100% { transform: translateY(0px) rotate(1deg); }
+  50% { transform: translateY(-12px) rotate(1deg); }
+}
+
+.phone-float {
+  animation: floatPhone 5s ease-in-out infinite;
+}
+
+/* Glow pulse for hero */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.7; }
+}
+
+.glow-pulse {
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+/* Nav blur transition */
+.nav-scrolled {
+  background: rgba(21, 43, 71, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05);
+}
+
+/* Form input focus ring */
+input:focus, textarea:focus {
+  outline: none;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #F59E0B 0%, #FCD34D 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hide all scrollbars globally — prevents blue scrollbar track on mobile */
+* {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-tap-highlight-color: transparent;
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* .no-scrollbar kept for explicit intent on the AppShowcase scroll row */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
