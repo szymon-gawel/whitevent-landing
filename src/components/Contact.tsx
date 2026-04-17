@@ -18,7 +18,7 @@ interface FormErrors {
 
 // Replace REPLACE_WITH_FORM_ID with your Formspree form ID.
 // Create a free form at https://formspree.io — you'll get an ID like "xrgvkpla".
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvaokgq';
 
 export default function Contact() {
   const { t } = useLanguage();
@@ -85,7 +85,7 @@ export default function Contact() {
           name: formData.name,
           email: formData.email,
           company: formData.company,
-          event_name: formData.eventName,
+          event: formData.eventName,
           message: formData.message,
         }),
       });
@@ -197,6 +197,7 @@ export default function Contact() {
             ) : (
               <form
                 onSubmit={handleSubmit}
+                method="POST"
                 noValidate
                 className="bg-white/4 border border-white/10 rounded-2xl p-8 space-y-5"
               >
@@ -266,7 +267,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    name="eventName"
+                    name="event"
                     value={formData.eventName}
                     onChange={handleChange}
                     placeholder={t('np. Forum HR 2025', 'e.g. HR Forum 2025')}
