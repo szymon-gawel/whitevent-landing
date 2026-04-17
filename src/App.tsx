@@ -1,3 +1,5 @@
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { LanguageProvider } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -23,6 +25,8 @@ export default function App() {
         </main>
         <Footer />
       </div>
+      <Analytics />
+      <SpeedInsights />
     </LanguageProvider>
   );
 }

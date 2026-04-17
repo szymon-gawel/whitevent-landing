@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { track } from '@vercel/analytics';
 import { useLanguage } from '../context/LanguageContext';
 
 function Logo() {
@@ -86,7 +87,7 @@ export default function Navbar() {
 
             {/* CTA button - desktop */}
             <button
-              onClick={() => scrollTo('contact')}
+              onClick={() => { track('cta_click', { location: 'navbar' }); scrollTo('contact'); }}
               className="hidden md:inline-flex items-center bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-4 py-2 rounded-md text-sm transition-all duration-200 hover:shadow-[0_0_20px_rgba(245,158,11,0.35)]"
             >
               {t('Zamów demo', 'Request demo')}
@@ -131,7 +132,7 @@ export default function Navbar() {
           ))}
           <div className="pt-2">
             <button
-              onClick={() => scrollTo('contact')}
+              onClick={() => { track('cta_click', { location: 'navbar_mobile' }); scrollTo('contact'); }}
               className="w-full bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-4 py-2.5 rounded-md text-sm transition-colors"
             >
               {t('Zamów demo', 'Request demo')}

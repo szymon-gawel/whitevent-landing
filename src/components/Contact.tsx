@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { track } from '@vercel/analytics';
 import { useLanguage } from '../context/LanguageContext';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
@@ -91,6 +92,7 @@ export default function Contact() {
       });
 
       if (res.ok) {
+        track('demo_request', { company: formData.company, event: formData.eventName });
         setSubmitted(true);
       } else {
         setSubmitError(
@@ -113,10 +115,10 @@ export default function Contact() {
   };
 
   const inputClass = (field?: string) =>
-    `w-full bg-white/8 border rounded-lg px-4 py-3 text-white placeholder-gray-500 text-sm transition-all duration-200 focus:bg-white/12 focus:ring-1 ${
+    `w-full bg-white border rounded-lg px-4 py-3 text-gray-900 placeholder-gray-400 text-sm transition-all duration-200 focus:ring-2 ${
       field
-        ? 'border-red-500/60 focus:border-red-400 focus:ring-red-400/30'
-        : 'border-white/15 focus:border-amber-500/60 focus:ring-amber-500/20'
+        ? 'border-red-400 focus:border-red-500 focus:ring-red-200'
+        : 'border-gray-200 focus:border-amber-500 focus:ring-amber-200'
     }`;
 
   return (

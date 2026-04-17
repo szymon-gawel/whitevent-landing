@@ -1,3 +1,4 @@
+import { track } from '@vercel/analytics';
 import { useLanguage } from '../context/LanguageContext';
 
 function PhoneMockup() {
@@ -161,7 +162,7 @@ export default function Hero() {
             {/* CTA buttons */}
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <button
-                onClick={() => scrollTo('contact')}
+                onClick={() => { track('cta_click', { location: 'hero' }); scrollTo('contact'); }}
                 className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-7 py-3.5 rounded-lg text-base transition-all duration-200 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:-translate-y-0.5"
               >
                 {t('Zamów demo', 'Request demo')}
