@@ -269,7 +269,7 @@ export default function Contact() {
                   </label>
                   <input
                     type="text"
-                    name="event"
+                    name="eventName"
                     value={formData.eventName}
                     onChange={handleChange}
                     placeholder={t('np. Forum HR 2025', 'e.g. HR Forum 2025')}
