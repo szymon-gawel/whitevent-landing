@@ -1,4 +1,5 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface Module {
@@ -49,42 +50,14 @@ function ModuleCard({ module, delay }: { module: Module; delay: number }) {
 }
 
 export default function Modules() {
-  const { t } = useLanguage();
+  const { tr } = useTranslation();
   const headingRef = useScrollAnimation();
 
   const modules: Module[] = [
-    {
-      icon: icons.networking,
-      title: t('Networking', 'Networking'),
-      desc: t(
-        'Lista uczestników z profilami i możliwością kontaktu przez email i LinkedIn. Uczestnicy budują relacje biznesowe przed, w trakcie i po evencie.',
-        'Attendee list with profiles and contact via email and LinkedIn. Attendees build business relationships before, during and after the event.'
-      ),
-    },
-    {
-      icon: icons.exhibitors,
-      title: t('Wystawcy', 'Exhibitors'),
-      desc: t(
-        'Profile wystawców z opisem, stoiskiem i możliwością umawiania spotkań bezpośrednio z poziomu aplikacji.',
-        'Exhibitor profiles with description, booth number and meeting booking directly from the app.'
-      ),
-    },
-    {
-      icon: icons.workshops,
-      title: t('Warsztaty', 'Workshops'),
-      desc: t(
-        'Zapisy na warsztaty z limitem miejsc. Uczestnicy rejestrują się na wybrane sesje, organizator kontroluje frekwencję.',
-        'Workshop registration with capacity limits. Attendees sign up for selected sessions, organizer controls attendance.'
-      ),
-    },
-    {
-      icon: icons.parallel,
-      title: t('Sesje równoległe', 'Parallel sessions'),
-      desc: t(
-        'Wiele ścieżek tematycznych jednocześnie. Uczestnicy wybierają sesje na które chcą pójść i budują swój plan dnia.',
-        'Multiple tracks running simultaneously. Attendees choose sessions they want to attend and build their own schedule.'
-      ),
-    },
+    { icon: icons.networking, title: tr(t.modules.items[0].title), desc: tr(t.modules.items[0].desc) },
+    { icon: icons.exhibitors, title: tr(t.modules.items[1].title), desc: tr(t.modules.items[1].desc) },
+    { icon: icons.workshops,  title: tr(t.modules.items[2].title), desc: tr(t.modules.items[2].desc) },
+    { icon: icons.parallel,   title: tr(t.modules.items[3].title), desc: tr(t.modules.items[3].desc) },
   ];
 
   return (
@@ -95,16 +68,13 @@ export default function Modules() {
           className="animate-on-scroll text-center mb-14"
         >
           <p className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-3">
-            {t('Rozszerzenia', 'Add-ons')}
+            {tr(t.modules.label)}
           </p>
           <h2 className="font-display font-bold text-4xl sm:text-5xl text-white mb-4">
-            {t('Moduły dodatkowe', 'Optional modules')}
+            {tr(t.modules.headline)}
           </h2>
           <p className="text-gray-400 text-lg max-w-xl mx-auto">
-            {t(
-              'Rozszerz aplikację o dodatkowe funkcje dopasowane do Twojego eventu. Każdy moduł aktywowany na życzenie.',
-              'Extend the app with additional features tailored to your event. Each module activated on request.'
-            )}
+            {tr(t.modules.subtext)}
           </p>
         </div>
 

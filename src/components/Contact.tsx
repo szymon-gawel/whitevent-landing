@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { track } from '@vercel/analytics';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface FormData {
@@ -17,12 +18,10 @@ interface FormErrors {
   company?: string;
 }
 
-// Replace REPLACE_WITH_FORM_ID with your Formspree form ID.
-// Create a free form at https://formspree.io — you'll get an ID like "xrgvkpla".
 const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mwvaokgq';
 
 export default function Contact() {
-  const { t } = useLanguage();
+  const { tr } = useTranslation();
   const headingRef = useScrollAnimation();
   const formRef = useScrollAnimation(120);
 
@@ -40,17 +39,13 @@ export default function Contact() {
 
   const validate = (): FormErrors => {
     const e: FormErrors = {};
-    if (!formData.name.trim()) {
-      e.name = t('Imię i nazwisko jest wymagane', 'Full name is required');
-    }
+    if (!formData.name.trim()) e.name = tr(t.contact.fields.nameRequired);
     if (!formData.email.trim()) {
-      e.email = t('Email jest wymagany', 'Email is required');
+      e.email = tr(t.contact.fields.emailRequired);
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      e.email = t('Podaj poprawny adres email', 'Enter a valid email address');
+      e.email = tr(t.contact.fields.emailInvalid);
     }
-    if (!formData.company.trim()) {
-      e.company = t('Nazwa firmy jest wymagana', 'Company name is required');
-    }
+    if (!formData.company.trim()) e.company = tr(t.contact.fields.companyRequired);
     return e;
   };
 
@@ -95,20 +90,10 @@ export default function Contact() {
         track('demo_request', { company: formData.company, event: formData.eventName });
         setSubmitted(true);
       } else {
-        setSubmitError(
-          t(
-            'Wystąpił błąd. Spróbuj ponownie lub napisz bezpośrednio.',
-            'An error occurred. Please try again or write to us directly.'
-          )
-        );
+        setSubmitError(tr(t.contact.fields.errorGeneral));
       }
     } catch {
-      setSubmitError(
-        t(
-          'Brak połączenia. Sprawdź internet i spróbuj ponownie.',
-          'No connection. Check your internet and try again.'
-        )
-      );
+      setSubmitError(tr(t.contact.fields.errorNetwork));
     } finally {
       setSubmitting(false);
     }
@@ -121,6 +106,12 @@ export default function Contact() {
         : 'border-gray-200 focus:border-amber-500 focus:ring-amber-200'
     }`;
 
+  const perkIcons = [
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />,
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />,
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />,
+  ];
+
   return (
     <section id="contact" className="py-24 bg-navy-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -131,47 +122,25 @@ export default function Contact() {
             className="animate-on-scroll lg:sticky lg:top-28"
           >
             <p className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-3">
-              {t('Kontakt', 'Contact')}
+              {tr(t.contact.label)}
             </p>
             <h2 className="font-display font-bold text-4xl sm:text-5xl text-white mb-5 leading-tight">
-              {t('Zamów demo', 'Request a demo')}
+              {tr(t.contact.headline)}
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed mb-10">
-              {t(
-                'Porozmawiajmy o Twoim evencie. Wspólnie dobierzemy odpowiednie funkcje i przygotujemy wycenę.',
-                "Let's talk about your event. Together we'll select the right features and prepare a quote."
-              )}
+              {tr(t.contact.subtext)}
             </p>
 
             {/* Trust signals */}
             <div className="space-y-4">
-              {[
-                {
-                  icon: (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  ),
-                  text: t('Odpowiadamy w 24h', 'We respond within 24h'),
-                },
-                {
-                  icon: (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  ),
-                  text: t('Darmowe demo i wycena', 'Free demo and quote'),
-                },
-                {
-                  icon: (
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
-                  ),
-                  text: t('Bez zobowiązań', 'No commitment'),
-                },
-              ].map((item, i) => (
+              {t.contact.perks.map((perk, i) => (
                 <div key={i} className="flex items-center gap-3 text-gray-400 text-sm">
                   <div className="w-8 h-8 rounded-lg bg-amber-500/10 flex items-center justify-center flex-shrink-0">
                     <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      {item.icon}
+                      {perkIcons[i]}
                     </svg>
                   </div>
-                  {item.text}
+                  {tr(perk)}
                 </div>
               ))}
             </div>
@@ -190,10 +159,10 @@ export default function Contact() {
                   </svg>
                 </div>
                 <h3 className="font-display font-bold text-2xl text-white mb-3">
-                  {t('Dziękujemy!', 'Thank you!')}
+                  {tr(t.contact.fields.success)}
                 </h3>
                 <p className="text-gray-400">
-                  {t('Odezwiemy się wkrótce.', "We'll be in touch soon.")}
+                  {tr(t.contact.fields.successSub)}
                 </p>
               </div>
             ) : (
@@ -206,7 +175,7 @@ export default function Contact() {
                 {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                    {t('Imię i nazwisko', 'Full name')}{' '}
+                    {tr(t.contact.fields.name)}{' '}
                     <span className="text-amber-500">*</span>
                   </label>
                   <input
@@ -214,7 +183,7 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    placeholder={t('Jan Kowalski', 'John Smith')}
+                    placeholder={tr(t.contact.fields.namePlaceholder)}
                     className={inputClass(errors.name)}
                   />
                   {errors.name && (
@@ -243,7 +212,7 @@ export default function Contact() {
                 {/* Company */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                    {t('Firma', 'Company')}{' '}
+                    {tr(t.contact.fields.company)}{' '}
                     <span className="text-amber-500">*</span>
                   </label>
                   <input
@@ -251,7 +220,7 @@ export default function Contact() {
                     name="company"
                     value={formData.company}
                     onChange={handleChange}
-                    placeholder={t('Nazwa firmy', 'Company name')}
+                    placeholder={tr(t.contact.fields.companyPlaceholder)}
                     className={inputClass(errors.company)}
                   />
                   {errors.company && (
@@ -262,9 +231,9 @@ export default function Contact() {
                 {/* Event name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                    {t('Nazwa eventu', 'Event name')}{' '}
+                    {tr(t.contact.fields.event)}{' '}
                     <span className="text-gray-600 text-xs font-normal">
-                      {t('(opcjonalnie)', '(optional)')}
+                      {tr(t.contact.fields.optional)}
                     </span>
                   </label>
                   <input
@@ -272,7 +241,7 @@ export default function Contact() {
                     name="eventName"
                     value={formData.eventName}
                     onChange={handleChange}
-                    placeholder={t('np. Forum HR 2025', 'e.g. HR Forum 2025')}
+                    placeholder={tr(t.contact.fields.eventPlaceholder)}
                     className={inputClass()}
                   />
                 </div>
@@ -280,9 +249,9 @@ export default function Contact() {
                 {/* Message */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
-                    {t('Wiadomość', 'Message')}{' '}
+                    {tr(t.contact.fields.message)}{' '}
                     <span className="text-gray-600 text-xs font-normal">
-                      {t('(opcjonalnie)', '(optional)')}
+                      {tr(t.contact.fields.optional)}
                     </span>
                   </label>
                   <textarea
@@ -290,10 +259,7 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    placeholder={t(
-                      'Opowiedz o swoim evencie — termin, liczba uczestników, oczekiwania...',
-                      'Tell us about your event — date, number of attendees, expectations...'
-                    )}
+                    placeholder={tr(t.contact.fields.messagePlaceholder)}
                     className={`${inputClass()} resize-none`}
                   />
                 </div>
@@ -317,10 +283,10 @@ export default function Contact() {
                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
                       </svg>
-                      {t('Wysyłanie...', 'Sending...')}
+                      {tr(t.contact.fields.sending)}
                     </>
                   ) : (
-                    t('Wyślij wiadomość', 'Send message')
+                    tr(t.contact.fields.submit)
                   )}
                 </button>
               </form>

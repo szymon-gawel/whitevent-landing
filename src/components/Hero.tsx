@@ -1,5 +1,6 @@
 import { track } from '@vercel/analytics';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 
 function PhoneMockup() {
   return (
@@ -102,7 +103,7 @@ function PhoneMockup() {
 }
 
 export default function Hero() {
-  const { t } = useLanguage();
+  const { tr } = useTranslation();
 
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
@@ -138,25 +139,22 @@ export default function Hero() {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-amber-500/10 border border-amber-500/25 rounded-full px-4 py-1.5 text-amber-400 text-xs font-semibold tracking-wider uppercase">
               <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-              {t('Aplikacja iOS & Android', 'iOS & Android app')}
+              {tr(t.hero.badge)}
             </div>
 
             {/* Headline */}
             <h1 className="font-display font-bold text-white leading-[1.08] tracking-tight max-w-full break-words">
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-[64px]">
-                {t('Aplikacja mobilna', 'Mobile app')}
+                {tr(t.hero.headline1)}
               </span>
               <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-[64px] text-gradient">
-                {t('na każdy event.', 'for every event.')}
+                {tr(t.hero.headline2)}
               </span>
             </h1>
 
             {/* Subtext */}
             <p className="text-gray-300 text-base sm:text-lg leading-relaxed max-w-xl mx-auto lg:mx-0 break-words">
-              {t(
-                'Dostarczamy gotową aplikację iOS i Android dedykowaną Twojemu eventowi. Agenda, prelegenci, networking i więcej — wszystko skonfigurowane pod Twoje potrzeby.',
-                'We deliver a ready-made iOS and Android app dedicated to your event. Agenda, speakers, networking and more — all configured to your needs.'
-              )}
+              {tr(t.hero.subtext)}
             </p>
 
             {/* CTA buttons */}
@@ -165,7 +163,7 @@ export default function Hero() {
                 onClick={() => { track('cta_click', { location: 'hero' }); scrollTo('contact'); }}
                 className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-7 py-3.5 rounded-lg text-base transition-all duration-200 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:-translate-y-0.5"
               >
-                {t('Zamów demo', 'Request demo')}
+                {tr(t.hero.ctaPrimary)}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                 </svg>
@@ -174,7 +172,7 @@ export default function Hero() {
                 onClick={() => scrollTo('features')}
                 className="inline-flex items-center justify-center gap-2 border border-white/25 hover:border-white/50 text-white font-medium px-7 py-3.5 rounded-lg text-base transition-all duration-200 hover:bg-white/5"
               >
-                {t('Zobacz funkcje', 'See features')}
+                {tr(t.hero.ctaSecondary)}
               </button>
             </div>
 
@@ -184,21 +182,21 @@ export default function Hero() {
                 <svg className="w-4 h-4 text-amber-500" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                 </svg>
-                {t('iOS & Android', 'iOS & Android')}
+                {tr(t.hero.stat1)}
               </div>
               <div className="w-px h-4 bg-white/15" />
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
-                {t('Gotowe w kilka dni', 'Ready in days')}
+                {tr(t.hero.stat2)}
               </div>
               <div className="w-px h-4 bg-white/15" />
               <div className="flex items-center gap-2 text-gray-400 text-sm">
                 <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                 </svg>
-                {t('Dedykowana aplikacja', 'Dedicated app')}
+                {tr(t.hero.stat3)}
               </div>
             </div>
           </div>

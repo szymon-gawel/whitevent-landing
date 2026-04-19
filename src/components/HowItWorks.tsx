@@ -1,5 +1,5 @@
-import { useRef } from 'react';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 interface Step {
@@ -38,34 +38,13 @@ function StepCard({ step, index }: { step: Step; index: number }) {
 }
 
 export default function HowItWorks() {
-  const { t } = useLanguage();
+  const { tr } = useTranslation();
   const headingRef = useScrollAnimation();
 
   const steps: Step[] = [
-    {
-      number: '01',
-      title: t('Kontakt i brief', 'Contact & brief'),
-      desc: t(
-        'Opowiedz nam o swoim evencie. Ustalamy zakres, moduły i branding.',
-        'Tell us about your event. We define scope, modules and branding.'
-      ),
-    },
-    {
-      number: '02',
-      title: t('Konfigurujemy', 'We configure'),
-      desc: t(
-        'Przygotowujemy aplikację pod Twój brand — logo, kolory, treści.',
-        'We prepare the app with your brand — logo, colors, content.'
-      ),
-    },
-    {
-      number: '03',
-      title: t('Publikacja', 'Go live'),
-      desc: t(
-        'Aplikacja gotowa na Twój event. Uczestnicy pobierają ją i są na bieżąco przez cały czas trwania eventu.',
-        'App ready for your event. Attendees download it and stay up to date throughout the entire event.'
-      ),
-    },
+    { number: '01', title: tr(t.howItWorks.steps[0].title), desc: tr(t.howItWorks.steps[0].desc) },
+    { number: '02', title: tr(t.howItWorks.steps[1].title), desc: tr(t.howItWorks.steps[1].desc) },
+    { number: '03', title: tr(t.howItWorks.steps[2].title), desc: tr(t.howItWorks.steps[2].desc) },
   ];
 
   return (
@@ -77,10 +56,10 @@ export default function HowItWorks() {
           className="animate-on-scroll text-center mb-16"
         >
           <p className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-3">
-            {t('Proces', 'Process')}
+            {tr(t.howItWorks.label)}
           </p>
           <h2 className="font-display font-bold text-4xl sm:text-5xl text-navy">
-            {t('Jak to działa?', 'How it works?')}
+            {tr(t.howItWorks.headline)}
           </h2>
         </div>
 

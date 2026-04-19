@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { track } from '@vercel/analytics';
 import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 
 function Logo() {
   return (
@@ -11,7 +13,8 @@ function Logo() {
 }
 
 export default function Navbar() {
-  const { lang, setLang, t } = useLanguage();
+  const { lang, setLang } = useLanguage();
+  const { tr } = useTranslation();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -27,9 +30,9 @@ export default function Navbar() {
   };
 
   const navLinks = [
-    { id: 'features', label: t('Funkcje', 'Features') },
-    { id: 'modules', label: t('Moduły', 'Modules') },
-    { id: 'contact', label: t('Kontakt', 'Contact') },
+    { id: 'features', label: tr(t.nav.features) },
+    { id: 'modules', label: tr(t.nav.modules) },
+    { id: 'contact', label: tr(t.nav.contact) },
   ];
 
   return (
@@ -90,7 +93,7 @@ export default function Navbar() {
               onClick={() => { track('cta_click', { location: 'navbar' }); scrollTo('contact'); }}
               className="hidden md:inline-flex items-center bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-4 py-2 rounded-md text-sm transition-all duration-200 hover:shadow-[0_0_20px_rgba(245,158,11,0.35)]"
             >
-              {t('Zamów demo', 'Request demo')}
+              {tr(t.nav.cta)}
             </button>
 
             {/* Hamburger */}
@@ -135,7 +138,7 @@ export default function Navbar() {
               onClick={() => { track('cta_click', { location: 'navbar_mobile' }); scrollTo('contact'); }}
               className="w-full bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-4 py-2.5 rounded-md text-sm transition-colors"
             >
-              {t('Zamów demo', 'Request demo')}
+              {tr(t.nav.cta)}
             </button>
           </div>
         </div>

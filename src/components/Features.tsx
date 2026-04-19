@@ -1,4 +1,5 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const icons = {
@@ -53,50 +54,15 @@ function FeatureCard({
 }
 
 export default function Features() {
-  const { t } = useLanguage();
+  const { tr } = useTranslation();
   const headingRef = useScrollAnimation();
 
   const features = [
-    {
-      icon: icons.agenda,
-      title: t('Agenda', 'Agenda'),
-      desc: t(
-        'Harmonogram eventu z sesjami, prelegentami i lokalizacjami. Uczestnicy zawsze wiedzą co, gdzie i kiedy.',
-        'Event schedule with sessions, speakers and locations. Attendees always know what, where and when.'
-      ),
-    },
-    {
-      icon: icons.speakers,
-      title: t('Prelegenci', 'Speakers'),
-      desc: t(
-        'Profile prelegentów z biografią, zdjęciem i informacjami o firmie.',
-        'Speaker profiles with biography, photo and company information.'
-      ),
-    },
-    {
-      icon: icons.news,
-      title: t('Aktualności', 'News'),
-      desc: t(
-        'Komunikaty organizatora w czasie rzeczywistym. Zmiany w agendzie, ogłoszenia i ważne informacje od razu w rękach uczestników.',
-        'Real-time organizer announcements. Schedule changes, updates and important information instantly in attendees\' hands.'
-      ),
-    },
-    {
-      icon: icons.push,
-      title: t('Push notyfikacje', 'Push notifications'),
-      desc: t(
-        'Natychmiastowe powiadomienia na telefon. Przypomnienia o sesjach, zmiany planu i pilne komunikaty.',
-        'Instant phone notifications. Session reminders, schedule changes and urgent messages.'
-      ),
-    },
-    {
-      icon: icons.admin,
-      title: t('Panel administracyjny', 'Admin panel'),
-      desc: t(
-        'Pełna kontrola nad treścią aplikacji. Zarządzaj agendą, prelegentami i aktualnościami samodzielnie — bez angażowania naszego zespołu.',
-        'Full control over app content. Manage agenda, speakers and announcements independently — without involving our team.'
-      ),
-    },
+    { icon: icons.agenda,    title: tr(t.features.items[0].title), desc: tr(t.features.items[0].desc) },
+    { icon: icons.speakers,  title: tr(t.features.items[1].title), desc: tr(t.features.items[1].desc) },
+    { icon: icons.news,      title: tr(t.features.items[2].title), desc: tr(t.features.items[2].desc) },
+    { icon: icons.push,      title: tr(t.features.items[3].title), desc: tr(t.features.items[3].desc) },
+    { icon: icons.admin,     title: tr(t.features.items[4].title), desc: tr(t.features.items[4].desc) },
   ];
 
   return (
@@ -107,16 +73,13 @@ export default function Features() {
           className="animate-on-scroll text-center mb-14"
         >
           <p className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-3">
-            {t('Funkcje', 'Features')}
+            {tr(t.features.label)}
           </p>
           <h2 className="font-display font-bold text-4xl sm:text-5xl text-navy mb-4">
-            {t('Co zawiera aplikacja?', "What's included?")}
+            {tr(t.features.headline)}
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            {t(
-              'Wszystko czego potrzebujesz do profesjonalnego eventu.',
-              'Everything you need for a professional event.'
-            )}
+            {tr(t.features.subtext)}
           </p>
         </div>
 

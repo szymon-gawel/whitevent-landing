@@ -1,4 +1,5 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 // ─── Pure-CSS phone frame ────────────────────────────────────────────────────
@@ -80,10 +81,10 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
 // ─── Section ─────────────────────────────────────────────────────────────────
 
 export default function AppShowcase() {
-  const { t } = useLanguage();
+  const { tr } = useTranslation();
 
-  const headingRef      = useScrollAnimation();
-  const phonesRef       = useScrollAnimation(100);
+  const headingRef       = useScrollAnimation();
+  const phonesRef        = useScrollAnimation(100);
   const desktopPhonesRef = useScrollAnimation(100);
 
   return (
@@ -109,16 +110,13 @@ export default function AppShowcase() {
           className="animate-on-scroll text-center mb-14"
         >
           <p className="text-amber-500 text-sm font-semibold uppercase tracking-widest mb-3">
-            {t('Demo', 'Demo')}
+            {tr(t.appShowcase.label)}
           </p>
           <h2 className="font-display font-bold text-4xl sm:text-5xl text-white mb-4">
-            {t('Zobacz na żywo', 'See it live')}
+            {tr(t.appShowcase.headline)}
           </h2>
           <p className="text-gray-300 text-lg max-w-lg mx-auto">
-            {t(
-              'Elegancki interfejs zaprojektowany z myślą o uczestnikach eventów.',
-              'Elegant interface designed with event attendees in mind.'
-            )}
+            {tr(t.appShowcase.subtext)}
           </p>
         </div>
 
@@ -138,9 +136,9 @@ export default function AppShowcase() {
         {/* Leading spacer keeps first card centered */}
         <div className="flex-shrink-0" style={{ width: 'calc(12.5vw)' }} />
         {[
-          { src: '/screenshots/networking.png', label: t('Networking', 'Networking') },
-          { src: '/screenshots/agenda.png',     label: t('Agenda', 'Agenda') },
-          { src: '/screenshots/exhibitor.png',  label: t('Wystawcy', 'Exhibitors') },
+          { src: '/screenshots/networking.png', label: tr(t.appShowcase.phoneLabels.networking) },
+          { src: '/screenshots/agenda.png',     label: tr(t.appShowcase.phoneLabels.agenda) },
+          { src: '/screenshots/exhibitor.png',  label: tr(t.appShowcase.phoneLabels.exhibitors) },
         ].map(({ src, label }) => (
           <div
             key={src}
@@ -177,13 +175,13 @@ export default function AppShowcase() {
           >
             <PhoneFrame
               src="/screenshots/networking.png"
-              alt={t('Networking', 'Networking')}
+              alt={tr(t.appShowcase.phoneLabels.networking)}
             />
             <p
               className="text-center text-gray-400 text-xs font-medium mt-3"
               style={{ transform: 'rotate(8deg)', transformOrigin: 'center' }}
             >
-              {t('Networking', 'Networking')}
+              {tr(t.appShowcase.phoneLabels.networking)}
             </p>
           </div>
 
@@ -191,10 +189,10 @@ export default function AppShowcase() {
           <div className="flex-shrink-0" style={{ width: 240, zIndex: 20, position: 'relative' }}>
             <PhoneFrame
               src="/screenshots/agenda.png"
-              alt={t('Agenda', 'Agenda')}
+              alt={tr(t.appShowcase.phoneLabels.agenda)}
             />
             <p className="text-center text-white text-sm font-semibold mt-3">
-              {t('Agenda', 'Agenda')}
+              {tr(t.appShowcase.phoneLabels.agenda)}
             </p>
           </div>
 
@@ -212,13 +210,13 @@ export default function AppShowcase() {
           >
             <PhoneFrame
               src="/screenshots/exhibitor.png"
-              alt={t('Wystawcy', 'Exhibitors')}
+              alt={tr(t.appShowcase.phoneLabels.exhibitors)}
             />
             <p
               className="text-center text-gray-400 text-xs font-medium mt-3"
               style={{ transform: 'rotate(-8deg)', transformOrigin: 'center' }}
             >
-              {t('Wystawcy', 'Exhibitors')}
+              {tr(t.appShowcase.phoneLabels.exhibitors)}
             </p>
           </div>
         </div>

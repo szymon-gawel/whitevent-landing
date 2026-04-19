@@ -1,7 +1,8 @@
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from '../hooks/useTranslation';
+import { t } from '../translations';
 
 export default function Footer() {
-  const { t } = useLanguage();
+  const { tr } = useTranslation();
 
   return (
     <footer className="bg-navy-deeper border-t border-white/8">
@@ -13,7 +14,7 @@ export default function Footer() {
               WHIT<span className="text-amber-500">E</span>VENT
             </div>
             <p className="text-gray-400 text-sm">
-              {t('Twoja aplikacja eventowa. Twój brand.', 'Your event app. Your brand.')}
+              {tr(t.footer.tagline)}
             </p>
           </div>
 
@@ -23,23 +24,17 @@ export default function Footer() {
               href="#"
               className="text-gray-500 hover:text-gray-300 transition-colors"
             >
-              {t('Polityka prywatności', 'Privacy policy')}
+              {tr(t.footer.privacy)}
             </a>
           </div>
         </div>
 
         <div className="mt-8 pt-8 border-t border-white/8 flex flex-col sm:flex-row items-center justify-between gap-3 text-center">
           <p className="text-gray-600 text-xs">
-            {t(
-              '© 2025 Whitevent. Wszelkie prawa zastrzeżone.',
-              '© 2025 Whitevent. All rights reserved.'
-            )}
+            {tr(t.footer.copyright)}
           </p>
           <p className="text-gray-700 text-xs">
-            {t(
-              'Marka handlowa prowadzona w ramach działalności gospodarczej',
-              'Brand operated as a sole trader business'
-            )}
+            {tr(t.footer.legal)}
           </p>
         </div>
       </div>
