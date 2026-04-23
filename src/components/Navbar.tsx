@@ -91,7 +91,7 @@ export default function Navbar() {
             {/* CTA button - desktop */}
             <button
               onClick={() => { track('cta_click', { location: 'navbar' }); scrollTo('contact'); }}
-              className="hidden md:inline-flex items-center bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-4 py-2 rounded-md text-sm transition-all duration-200 hover:shadow-[0_0_20px_rgba(245,158,11,0.35)]"
+              className="hidden md:inline-flex items-center bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-4 py-2 rounded-md text-sm transition-all duration-200"
             >
               {tr(t.nav.cta)}
             </button>

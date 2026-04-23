@@ -5,20 +5,11 @@ import { t } from '../translations';
 function PhoneMockup() {
   return (
     <div className="phone-float relative w-full max-w-[260px] mx-auto">
-      {/* Glow behind phone */}
-      <div
-        className="absolute inset-0 glow-pulse"
-        style={{
-          background: 'radial-gradient(ellipse 80% 60% at 50% 50%, rgba(245,158,11,0.18) 0%, transparent 70%)',
-          transform: 'scale(1.3)',
-          borderRadius: '50%',
-        }}
-      />
       <svg
         viewBox="0 0 260 520"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        className="relative w-full drop-shadow-[0_32px_64px_rgba(0,0,0,0.5)]"
+        className="relative w-full"
       >
         {/* Phone body */}
         <rect x="2" y="2" width="256" height="516" rx="38" fill="#0A1628" />
@@ -161,7 +152,7 @@ export default function Hero() {
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
               <button
                 onClick={() => { track('cta_click', { location: 'hero' }); scrollTo('contact'); }}
-                className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-7 py-3.5 rounded-lg text-base transition-all duration-200 hover:shadow-[0_0_30px_rgba(245,158,11,0.4)] hover:-translate-y-0.5"
+                className="inline-flex items-center justify-center gap-2 bg-amber-500 hover:bg-amber-400 text-navy-deeper font-semibold px-7 py-3.5 rounded-lg text-base transition-all duration-200 hover:-translate-y-0.5"
               >
                 {tr(t.hero.ctaPrimary)}
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -204,14 +195,6 @@ export default function Hero() {
           {/* Right — phone mockup */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative w-full max-w-xs">
-              {/* Outer glow ring */}
-              <div
-                className="absolute inset-[-20%] pointer-events-none glow-pulse"
-                style={{
-                  background:
-                    'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(245,158,11,0.12) 0%, transparent 65%)',
-                }}
-              />
               <PhoneMockup />
             </div>
           </div>

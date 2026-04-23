@@ -24,7 +24,7 @@ function StepCard({ step, index }: { step: Step; index: number }) {
         {/* Step number circle */}
         <div className="relative mb-6">
           <div className="w-20 h-20 rounded-full bg-navy flex items-center justify-center border-2 border-amber-500/30 shadow-[0_0_0_8px_rgba(245,158,11,0.06)]">
-            <span className="font-display font-bold text-3xl text-amber-500">
+            <span className="font-display font-bold text-3xl text-amber-500 tabular-nums leading-none">
               {step.number}
             </span>
           </div>

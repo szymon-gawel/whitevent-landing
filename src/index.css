@@ -45,15 +45,6 @@ body {
   animation: floatPhone 5s ease-in-out infinite;
 }
 
-/* Glow pulse for hero */
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.7; }
-}
-
-.glow-pulse {
-  animation: glowPulse 4s ease-in-out infinite;
-}
 
 /* Nav blur transition */
 .nav-scrolled {

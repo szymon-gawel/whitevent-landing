@@ -152,7 +152,7 @@ export default function Contact() {
             className="animate-on-scroll"
           >
             {submitted ? (
-              <div className="bg-white/5 border border-amber-500/30 rounded-2xl p-10 text-center">
+              <div className="flex flex-col items-center justify-center min-h-[320px] text-center bg-white/5 border border-amber-500/30 rounded-2xl p-10">
                 <div className="w-16 h-16 rounded-full bg-amber-500/15 flex items-center justify-center mx-auto mb-5">
                   <svg className="w-8 h-8 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
@@ -275,7 +275,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={submitting}
-                  className="w-full bg-amber-500 hover:bg-amber-400 disabled:bg-amber-500/50 text-navy-deeper font-semibold py-3.5 rounded-xl text-base transition-all duration-200 hover:shadow-[0_0_24px_rgba(245,158,11,0.35)] hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:translate-y-0 flex items-center justify-center gap-2"
+                  className="w-full bg-amber-500 hover:bg-amber-400 disabled:bg-amber-500/50 text-navy-deeper font-semibold py-3.5 rounded-xl text-base transition-all duration-200 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:translate-y-0 flex items-center justify-center gap-2"
                 >
                   {submitting ? (
                     <>
