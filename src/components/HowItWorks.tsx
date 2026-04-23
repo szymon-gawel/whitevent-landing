@@ -24,7 +24,7 @@ function StepCard({ step, index }: { step: Step; index: number }) {
         {/* Step number circle */}
         <div className="relative mb-6">
           <div className="w-20 h-20 rounded-full bg-navy flex items-center justify-center border-2 border-amber-500/30 shadow-[0_0_0_8px_rgba(245,158,11,0.06)]">
-            <span className="font-display font-bold text-3xl text-amber-500 tabular-nums leading-none">
+            <span className="font-sans font-bold text-3xl text-amber-500 tabular-nums leading-none">
               {step.number}
             </span>
           </div>
@@ -42,9 +42,9 @@ export default function HowItWorks() {
   const headingRef = useScrollAnimation();
 
   const steps: Step[] = [
-    { number: '01', title: tr(t.howItWorks.steps[0].title), desc: tr(t.howItWorks.steps[0].desc) },
-    { number: '02', title: tr(t.howItWorks.steps[1].title), desc: tr(t.howItWorks.steps[1].desc) },
-    { number: '03', title: tr(t.howItWorks.steps[2].title), desc: tr(t.howItWorks.steps[2].desc) },
+    { number: '1', title: tr(t.howItWorks.steps[0].title), desc: tr(t.howItWorks.steps[0].desc) },
+    { number: '2', title: tr(t.howItWorks.steps[1].title), desc: tr(t.howItWorks.steps[1].desc) },
+    { number: '3', title: tr(t.howItWorks.steps[2].title), desc: tr(t.howItWorks.steps[2].desc) },
   ];
 
   return (
