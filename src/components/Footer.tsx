@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Links */}
           <div className="flex items-center gap-6 text-sm">
             <a
-              href="#"
+              href="/privacy-policy"
               className="text-gray-500 hover:text-gray-300 transition-colors"
             >
               {tr(t.footer.privacy)}

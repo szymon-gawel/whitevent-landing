@@ -9,8 +9,21 @@ import Features from './components/Features';
 import Modules from './components/Modules';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+
+const path = window.location.pathname;
 
 export default function App() {
+  if (path === '/privacy-policy') {
+    return (
+      <>
+        <PrivacyPolicy />
+        <Analytics />
+        <SpeedInsights />
+      </>
+    );
+  }
+
   return (
     <LanguageProvider>
       <div className="min-h-screen font-sans antialiased overflow-x-hidden">

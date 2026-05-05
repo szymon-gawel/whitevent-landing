@@ -7,9 +7,12 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: 'https://whitevent.com',
-      routes: ['/'],
+      routes: ['/', '/privacy-policy'],
     }),
   ],
+  server: {
+    historyApiFallback: true,
+  },
   build: {
     rollupOptions: {
       output: {
