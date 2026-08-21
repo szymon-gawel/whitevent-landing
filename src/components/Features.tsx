@@ -35,9 +35,9 @@ function FeatureCard({
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="animate-on-scroll group bg-white rounded-2xl p-7 border border-gray-100 hover:border-amber-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+      className="animate-on-scroll bg-white rounded-2xl p-7 border border-amber-200 shadow-lg"
     >
-      <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-5 group-hover:bg-amber-100 transition-colors">
+      <div className="w-12 h-12 rounded-xl bg-amber-50 flex items-center justify-center mb-5">
         <svg
           className="w-6 h-6 text-amber-500"
           fill="none"

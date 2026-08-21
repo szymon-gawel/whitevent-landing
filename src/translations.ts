@@ -73,7 +73,7 @@ export const t = {
     items: [
       {
         title: { pl: 'Networking', en: 'Networking' },
-        desc: { pl: 'Lista uczestników z profilami i możliwością kontaktu przez email i LinkedIn. Uczestnicy budują relacje biznesowe przed, w trakcie i po evencie', en: 'Attendee list with profiles and contact via email and LinkedIn. Attendees build business relationships before, during and after the event' },
+        desc: { pl: 'Lista uczestników z profilami, kontaktem przez email i LinkedIn oraz umawianiem spotkań 1:1 na wybrany termin. Uczestnicy budują relacje biznesowe przed, w trakcie i po evencie', en: 'Attendee list with profiles, contact via email and LinkedIn, and 1:1 meeting scheduling with time slots. Attendees build business relationships before, during and after the event' },
       },
       {
         title: { pl: 'Wystawcy', en: 'Exhibitors' },
@@ -86,6 +86,18 @@ export const t = {
       {
         title: { pl: 'Sesje równoległe', en: 'Parallel sessions' },
         desc: { pl: 'Wiele ścieżek tematycznych jednocześnie. Uczestnicy wybierają sesje na które chcą pójść i budują swój plan dnia', en: 'Multiple tracks running simultaneously. Attendees choose sessions they want to attend and build their own schedule' },
+      },
+      {
+        title: { pl: 'Bilety i check-in', en: 'Ticketing & check-in' },
+        desc: { pl: 'Bilet z unikalnym kodem QR w telefonie uczestnika. Obsługa skanuje kod przy wejściu, także offline - dane synchronizują się automatycznie po odzyskaniu połączenia', en: "Ticket with a unique QR code in the attendee's phone. Staff scan it at the entrance, even offline - data syncs automatically once the connection is back" },
+      },
+      {
+        title: { pl: 'Oceny i opinie', en: 'Ratings & feedback' },
+        desc: { pl: 'Uczestnicy oceniają sesje i zostawiają komentarze bezpośrednio w aplikacji. Organizator na bieżąco widzi, co się podobało, a co wymaga poprawy', en: 'Attendees rate sessions and leave comments directly in the app. The organizer sees in real time what worked and what needs improvement' },
+      },
+      {
+        title: { pl: 'Wielojęzyczność', en: 'Multi-language' },
+        desc: { pl: 'Aplikacja dostępna dla uczestników w wielu językach jednocześnie - każdy wybiera swój w ustawieniach. Idealne dla eventów międzynarodowych', en: 'The app is available to attendees in multiple languages at once - everyone picks their own in settings. Perfect for international events' },
       },
     ],
   },
@@ -123,7 +135,7 @@ export const t = {
   footer: {
     tagline: { pl: 'Twoja aplikacja eventowa. Twój brand.', en: 'Your event app. Your brand.' },
     privacy: { pl: 'Polityka prywatności', en: 'Privacy policy' },
-    copyright: { pl: '© 2025 Whitevent. Wszelkie prawa zastrzeżone.', en: '© 2025 Whitevent. All rights reserved.' },
+    copyright: { pl: '© 2026 Whitevent. Wszelkie prawa zastrzeżone.', en: '© 2026 Whitevent. All rights reserved.' },
     legal: { pl: 'Marka handlowa prowadzona w ramach działalności gospodarczej', en: 'Brand operated as a sole trader business' },
   },
   appShowcase: {

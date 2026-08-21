@@ -21,6 +21,15 @@ const icons = {
   parallel: (
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
   ),
+  ticketing: (
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M16.5 6v.75m0 3v.75m0 3v.75m0 3V18m-9-5.25h5.25M7.5 15h3M3.375 5.25c-.621 0-1.125.504-1.125 1.125v3.026a2.999 2.999 0 0 1 0 5.198v3.026c0 .621.504 1.125 1.125 1.125h17.25c.621 0 1.125-.504 1.125-1.125v-3.026a2.999 2.999 0 0 1 0-5.198V6.375c0-.621-.504-1.125-1.125-1.125H3.375Z" />
+  ),
+  ratings: (
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
+  ),
+  multiLanguage: (
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.75} d="m10.5 21 5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 0 1 6-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 0 1-3.827-5.802" />
+  ),
 };
 
 function ModuleCard({ module, delay }: { module: Module; delay: number }) {
@@ -28,11 +37,11 @@ function ModuleCard({ module, delay }: { module: Module; delay: number }) {
   return (
     <div
       ref={ref as React.RefObject<HTMLDivElement>}
-      className="animate-on-scroll group bg-white rounded-2xl p-7 border border-gray-100 hover:border-navy/20 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 relative overflow-hidden"
+      className="animate-on-scroll group bg-white rounded-2xl p-7 border border-gray-100 hover:border-navy/20 shadow-sm hover:shadow-xl transition-all duration-300 relative overflow-hidden h-full flex flex-col"
     >
       <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-navy/0 via-amber-500/50 to-navy/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-      <div className="w-12 h-12 rounded-xl bg-navy/5 flex items-center justify-center mb-5 group-hover:bg-navy/10 transition-colors">
+      <div className="w-12 h-12 rounded-xl bg-navy/5 flex items-center justify-center mb-5">
         <svg
           className="w-6 h-6 text-navy"
           fill="none"
@@ -54,10 +63,13 @@ export default function Modules() {
   const headingRef = useScrollAnimation();
 
   const modules: Module[] = [
-    { icon: icons.networking, title: tr(t.modules.items[0].title), desc: tr(t.modules.items[0].desc) },
-    { icon: icons.exhibitors, title: tr(t.modules.items[1].title), desc: tr(t.modules.items[1].desc) },
-    { icon: icons.workshops,  title: tr(t.modules.items[2].title), desc: tr(t.modules.items[2].desc) },
-    { icon: icons.parallel,   title: tr(t.modules.items[3].title), desc: tr(t.modules.items[3].desc) },
+    { icon: icons.networking,    title: tr(t.modules.items[0].title), desc: tr(t.modules.items[0].desc) },
+    { icon: icons.exhibitors,    title: tr(t.modules.items[1].title), desc: tr(t.modules.items[1].desc) },
+    { icon: icons.workshops,     title: tr(t.modules.items[2].title), desc: tr(t.modules.items[2].desc) },
+    { icon: icons.parallel,      title: tr(t.modules.items[3].title), desc: tr(t.modules.items[3].desc) },
+    { icon: icons.ticketing,     title: tr(t.modules.items[4].title), desc: tr(t.modules.items[4].desc) },
+    { icon: icons.ratings,       title: tr(t.modules.items[5].title), desc: tr(t.modules.items[5].desc) },
+    { icon: icons.multiLanguage, title: tr(t.modules.items[6].title), desc: tr(t.modules.items[6].desc) },
   ];
 
   return (
@@ -78,9 +90,11 @@ export default function Modules() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="flex flex-wrap justify-center gap-5">
           {modules.map((mod, i) => (
-            <ModuleCard key={i} module={mod} delay={i * 80} />
+            <div key={i} className="w-full md:w-[calc(50%-0.625rem)] lg:w-[calc(33.333%-0.833rem)] flex">
+              <ModuleCard module={mod} delay={i * 80} />
+            </div>
           ))}
         </div>
       </div>
