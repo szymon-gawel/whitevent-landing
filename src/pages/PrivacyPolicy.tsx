@@ -14,7 +14,6 @@ export default function PrivacyPolicy() {
         </h1>
         <p className="text-sm text-gray-500 mb-8">Ostatnia aktualizacja: maj 2025</p>
 
-        {/* 1 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           1. Administrator danych osobowych
         </h2>
@@ -36,7 +35,6 @@ export default function PrivacyPolicy() {
           </a>
         </p>
 
-        {/* 2 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           2. Jakie dane zbieramy
         </h2>
@@ -78,7 +76,6 @@ export default function PrivacyPolicy() {
           <li>Oceny sesji i komentarze (opcjonalnie)</li>
         </ul>
 
-        {/* 3 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           3. Cel i podstawa prawna przetwarzania danych
         </h2>
@@ -135,7 +132,6 @@ export default function PrivacyPolicy() {
           </table>
         </div>
 
-        {/* 4 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           4. Odbiorcy danych
         </h2>
@@ -164,7 +160,6 @@ export default function PrivacyPolicy() {
           Nie sprzedajemy Twoich danych osobowych żadnym podmiotom trzecim.
         </p>
 
-        {/* 5 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           5. Przekazywanie danych poza EOG
         </h2>
@@ -173,7 +168,6 @@ export default function PrivacyPolicy() {
           się na podstawie standardowych klauzul umownych zatwierdzonych przez Komisję Europejską.
         </p>
 
-        {/* 6 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           6. Okres przechowywania danych
         </h2>
@@ -187,7 +181,6 @@ export default function PrivacyPolicy() {
           <li>Korespondencja e-mail — przez okres 5 lat</li>
         </ul>
 
-        {/* 7 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           7. Twoje prawa
         </h2>
@@ -225,7 +218,6 @@ export default function PrivacyPolicy() {
           </a>
         </p>
 
-        {/* 8 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           8. Pliki cookies
         </h2>
@@ -234,7 +226,6 @@ export default function PrivacyPolicy() {
           Analytics działa bez cookies i jest zgodne z RODO.
         </p>
 
-        {/* 9 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           9. Bezpieczeństwo danych
         </h2>
@@ -246,7 +237,6 @@ export default function PrivacyPolicy() {
           <li>Rate limiting chroniący przed atakami brute-force</li>
         </ul>
 
-        {/* 10 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           10. Zmiany polityki prywatności
         </h2>
@@ -255,7 +245,6 @@ export default function PrivacyPolicy() {
           poinformujemy poprzez aktualizację daty na górze strony.
         </p>
 
-        {/* 11 */}
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           11. Kontakt
         </h2>

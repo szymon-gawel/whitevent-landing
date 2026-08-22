@@ -2,13 +2,10 @@ import { useTranslation } from '../hooks/useTranslation';
 import { t } from '../translations';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
-// ─── Pure-CSS phone frame ────────────────────────────────────────────────────
-
 function PhoneFrame({ src, alt }: { src: string; alt: string }) {
   return (
     <div style={{ position: 'relative', width: '100%' }}>
 
-      {/* Volume up */}
       <div style={{
         position: 'absolute', left: -4, top: '19%',
         width: 4, height: '5.5%', minHeight: 22,
@@ -16,7 +13,6 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
         background: 'linear-gradient(to right, #0e0e0e, #2a2a2c)',
         boxShadow: '-1px 0 3px rgba(0,0,0,0.65)',
       }} />
-      {/* Volume down */}
       <div style={{
         position: 'absolute', left: -4, top: 'calc(19% + 32px)',
         width: 4, height: '5.5%', minHeight: 22,
@@ -24,7 +20,6 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
         background: 'linear-gradient(to right, #0e0e0e, #2a2a2c)',
         boxShadow: '-1px 0 3px rgba(0,0,0,0.65)',
       }} />
-      {/* Power */}
       <div style={{
         position: 'absolute', right: -4, top: '24%',
         width: 4, height: '9%', minHeight: 38,
@@ -33,7 +28,6 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
         boxShadow: '1px 0 3px rgba(0,0,0,0.65)',
       }} />
 
-      {/* Phone shell */}
       <div style={{
         background: 'linear-gradient(148deg, #303032 0%, #1c1c1e 38%, #131313 100%)',
         borderRadius: 44,
@@ -45,7 +39,6 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
           '0 0 0 1px rgba(255,255,255,0.07)',
         ].join(', '),
       }}>
-        {/* Screen */}
         <div style={{
           borderRadius: 38,
           overflow: 'hidden',
@@ -53,7 +46,6 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
           position: 'relative',
           aspectRatio: '9 / 19.5',
         }}>
-          {/* Dynamic island pill */}
           <div style={{
             position: 'absolute',
             top: 10, left: '50%',
@@ -77,8 +69,6 @@ function PhoneFrame({ src, alt }: { src: string; alt: string }) {
     </div>
   );
 }
-
-// ─── Section ─────────────────────────────────────────────────────────────────
 
 export default function AppShowcase() {
   const { tr } = useTranslation();
@@ -104,7 +94,6 @@ export default function AppShowcase() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
-        {/* Heading */}
         <div
           ref={headingRef as React.RefObject<HTMLDivElement>}
           className="animate-on-scroll text-center mb-14"
@@ -120,9 +109,8 @@ export default function AppShowcase() {
           </p>
         </div>
 
-      </div>{/* close padded container so scroll row can be full-width */}
+      </div>
 
-      {/* ── Mobile: full-width horizontal scroll row ── */}
       <div
         ref={phonesRef as React.RefObject<HTMLDivElement>}
         className="animate-on-scroll md:hidden w-full overflow-x-auto no-scrollbar flex pb-10 pt-2"
@@ -133,7 +121,6 @@ export default function AppShowcase() {
           msOverflowStyle: 'none',
         } as React.CSSProperties}
       >
-        {/* Leading spacer keeps first card centered */}
         <div className="flex-shrink-0" style={{ width: 'calc(12.5vw)' }} />
         {[
           { src: '/screenshots/networking.png', label: tr(t.appShowcase.phoneLabels.networking) },
@@ -149,19 +136,15 @@ export default function AppShowcase() {
             <p className="text-center text-gray-300 text-sm font-medium mt-3">{label}</p>
           </div>
         ))}
-        {/* Trailing spacer */}
         <div className="flex-shrink-0" style={{ width: 'calc(12.5vw)' }} />
       </div>
 
-      {/* re-open padded container for desktop layout */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
 
-        {/* ── Desktop: rotated trio ── */}
         <div
           ref={desktopPhonesRef as React.RefObject<HTMLDivElement>}
           className="animate-on-scroll hidden md:flex items-end justify-center"
         >
-          {/* Left — networking.png */}
           <div
             className="flex-shrink-0"
             style={{
@@ -185,7 +168,6 @@ export default function AppShowcase() {
             </p>
           </div>
 
-          {/* Center — agenda.png */}
           <div className="flex-shrink-0" style={{ width: 240, zIndex: 20, position: 'relative' }}>
             <PhoneFrame
               src="/screenshots/agenda.png"
@@ -196,7 +178,6 @@ export default function AppShowcase() {
             </p>
           </div>
 
-          {/* Right — exhibitor.png */}
           <div
             className="flex-shrink-0"
             style={{
@@ -221,7 +202,7 @@ export default function AppShowcase() {
           </div>
         </div>
 
-      </div>{/* close desktop padded container */}
+      </div>
     </section>
   );
 }

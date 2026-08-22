@@ -116,7 +116,6 @@ export default function Contact() {
     <section id="contact" className="py-24 bg-navy-dark">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
-          {/* Left — text */}
           <div
             ref={headingRef as React.RefObject<HTMLDivElement>}
             className="animate-on-scroll lg:sticky lg:top-28"
@@ -131,7 +130,6 @@ export default function Contact() {
               {tr(t.contact.subtext)}
             </p>
 
-            {/* Trust signals */}
             <div className="space-y-4">
               {t.contact.perks.map((perk, i) => (
                 <div key={i} className="flex items-center gap-3 text-gray-400 text-sm">
@@ -146,7 +144,6 @@ export default function Contact() {
             </div>
           </div>
 
-          {/* Right — form */}
           <div
             ref={formRef as React.RefObject<HTMLDivElement>}
             className="animate-on-scroll"
@@ -172,7 +169,6 @@ export default function Contact() {
                 noValidate
                 className="bg-white/4 border border-white/10 rounded-2xl p-8 space-y-5"
               >
-                {/* Name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
                     {tr(t.contact.fields.name)}{' '}
@@ -191,7 +187,6 @@ export default function Contact() {
                   )}
                 </div>
 
-                {/* Email */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
                     Email <span className="text-amber-500">*</span>
@@ -209,7 +204,6 @@ export default function Contact() {
                   )}
                 </div>
 
-                {/* Company */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
                     {tr(t.contact.fields.company)}{' '}
@@ -228,7 +222,6 @@ export default function Contact() {
                   )}
                 </div>
 
-                {/* Event name */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
                     {tr(t.contact.fields.event)}{' '}
@@ -246,7 +239,6 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Message */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-1.5">
                     {tr(t.contact.fields.message)}{' '}
@@ -264,14 +256,12 @@ export default function Contact() {
                   />
                 </div>
 
-                {/* Submit error */}
                 {submitError && (
                   <p className="text-red-400 text-sm bg-red-500/10 border border-red-500/20 rounded-lg px-4 py-2">
                     {submitError}
                   </p>
                 )}
 
-                {/* Submit button */}
                 <button
                   type="submit"
                   disabled={submitting}
