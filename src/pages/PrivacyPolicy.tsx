@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
         <h1 className="text-3xl font-bold mb-2" style={{ color: '#1E3A5F' }}>
           Polityka Prywatności
         </h1>
-        <p className="text-sm text-gray-500 mb-8">Ostatnia aktualizacja: maj 2025</p>
+        <p className="text-sm text-gray-500 mb-8">Ostatnia aktualizacja: sierpień 2026</p>
 
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           1. Administrator danych osobowych
@@ -70,7 +70,11 @@ export default function PrivacyPolicy() {
         </p>
         <ul className="list-disc pl-6 space-y-1 text-gray-700 mt-2">
           <li>Adres e-mail i hasło (do logowania)</li>
-          <li>Dane profilu uczestnika (imię, nazwisko, firma, stanowisko, opis)</li>
+          <li>
+            Dane profilu uczestnika (imię, nazwisko, firma, stanowisko, opis, link do profilu
+            LinkedIn, informacja czego szukasz w kontaktach networkingowych — wszystkie pola
+            opcjonalne poza imieniem i nazwiskiem)
+          </li>
           <li>Token urządzenia do push notyfikacji</li>
           <li>Zapisy na warsztaty i rezerwacje spotkań</li>
           <li>Oceny sesji i komentarze (opcjonalnie)</li>
@@ -131,6 +135,13 @@ export default function PrivacyPolicy() {
             </tbody>
           </table>
         </div>
+        <p className="text-gray-700 leading-relaxed mt-3 text-sm">
+          Zgoda na push notyfikacje jest wyrażana poprzez zezwolenie systemowe (iOS/Android) w
+          momencie pierwszego żądania o taką zgodę przez aplikację — bez tego zezwolenia żadne
+          powiadomienia nie mogą zostać dostarczone na Twoje urządzenie, niezależnie od ustawień
+          w aplikacji. Rodzaje powiadomień (przypomnienia o sesjach, treści marketingowe) możesz
+          dodatkowo włączać i wyłączać osobno w Ustawieniach aplikacji.
+        </p>
 
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           4. Odbiorcy danych

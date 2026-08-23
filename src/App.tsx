@@ -10,6 +10,7 @@ import Modules from './components/Modules';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
+import Terms from './pages/Terms';
 
 const path = window.location.pathname;
 
@@ -18,6 +19,16 @@ export default function App() {
     return (
       <>
         <PrivacyPolicy />
+        <Analytics />
+        <SpeedInsights />
+      </>
+    );
+  }
+
+  if (path === '/terms') {
+    return (
+      <>
+        <Terms />
         <Analytics />
         <SpeedInsights />
       </>

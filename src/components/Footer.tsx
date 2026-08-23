@@ -24,6 +24,12 @@ export default function Footer() {
             >
               {tr(t.footer.privacy)}
             </a>
+            <a
+              href="/terms"
+              className="text-gray-500 hover:text-gray-300 transition-colors"
+            >
+              Regulamin
+            </a>
           </div>
         </div>
 
