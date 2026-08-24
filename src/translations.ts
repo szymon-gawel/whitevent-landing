@@ -4,6 +4,7 @@ export const t = {
   nav: {
     features: { pl: 'Funkcje', en: 'Features' },
     modules: { pl: 'Moduły', en: 'Modules' },
+    faq: { pl: 'FAQ', en: 'FAQ' },
     contact: { pl: 'Kontakt', en: 'Contact' },
     cta: { pl: 'Zamów demo', en: 'Request demo' },
   },
@@ -98,6 +99,72 @@ export const t = {
       {
         title: { pl: 'Wielojęzyczność', en: 'Multi-language' },
         desc: { pl: 'Aplikacja dostępna dla uczestników w wielu językach jednocześnie - każdy wybiera swój w ustawieniach. Idealne dla eventów międzynarodowych', en: 'The app is available to attendees in multiple languages at once - everyone picks their own in settings. Perfect for international events' },
+      },
+    ],
+  },
+  faq: {
+    label: { pl: 'FAQ', en: 'FAQ' },
+    headline: { pl: 'Najczęstsze pytania', en: 'Frequently asked questions' },
+    subtext: {
+      pl: 'Nie znalazłeś odpowiedzi? Napisz do nas - chętnie rozwiejemy wszystkie wątpliwości',
+      en: "Didn't find your answer? Write to us - we'll gladly clear up any doubts",
+    },
+    items: [
+      {
+        q: { pl: 'Co jeśli nie chcę niektórych funkcji z pakietu podstawowego?', en: "What if I don't want some of the base package features?" },
+        a: {
+          pl: 'Żaden problem. Pakiet podstawowy to punkt wyjścia, a nie sztywny zestaw. Funkcje, których nie potrzebujesz, po prostu ukrywamy - uczestnicy widzą tylko to, co faktycznie ma sens dla Twojego eventu. Aplikację dopasowujemy do Twojego zakresu, nie odwrotnie.',
+          en: 'No problem. The base package is a starting point, not a fixed set. Features you don\'t need are simply hidden - attendees only see what actually makes sense for your event. We tailor the app to your scope, not the other way around.',
+        },
+      },
+      {
+        q: { pl: 'Ile czasu mija od pierwszego kontaktu do gotowej, wdrożonej aplikacji?', en: 'How long does it take from first contact to a fully deployed, ready-to-use app?' },
+        a: {
+          pl: 'W typowym przypadku aplikacja jest gotowa w kilka dni roboczych od potwierdzenia zakresu i otrzymania materiałów. Dokładny termin zależy od liczby modułów, ilości treści do wprowadzenia oraz tego, jak szybko dostarczysz materiały. Przy pilnych eventach jesteśmy w stanie pracować w trybie przyspieszonym - daj nam znać o terminie już w pierwszej wiadomości.',
+          en: 'In a typical case the app is ready within a few business days from confirming the scope and receiving your materials. The exact timeline depends on the number of modules, the amount of content to enter and how quickly you provide the assets. For urgent events we can work in a fast-track mode - just let us know your date in the first message.',
+        },
+      },
+      {
+        q: { pl: 'Co powinienem podać w pierwszej wiadomości, żeby przyspieszyć proces?', en: 'What should I provide in the first message to speed up the process?' },
+        a: {
+          pl: 'Najbardziej pomaga krótki opis eventu: termin, przybliżona liczba uczestników oraz funkcje, które Cię interesują. Demo możemy przygotować na dwa sposoby. Jeśli chcesz zobaczyć w pełni obrandowaną aplikację (Twoje logo, kolory, treści), prześlij nam swoje materiały - logo, kolorystykę i przykładowe dane, np. fragment agendy czy listę prelegentów. Jeśli wolisz najpierw po prostu zobaczyć, jak działa aplikacja, pokażemy Ci ją na naszej wersji whitelabel - wtedy żadne materiały z Twojej strony nie są potrzebne.',
+          en: 'The most helpful thing is a short description of your event: the date, an approximate number of attendees and the features you\'re interested in. We can prepare the demo in two ways. If you want to see a fully branded app (your logo, colors, content), send us your assets - logo, color scheme and some sample data, e.g. a piece of the agenda or a speaker list. If you\'d rather just see how the app works first, we\'ll show it to you on our whitelabel version - in that case no assets are needed from your side.',
+        },
+      },
+      {
+        q: { pl: 'Ile kosztuje aplikacja?', en: 'How much does the app cost?' },
+        a: {
+          pl: 'Cena zależy od wybranego pakietu i zakresu - liczby modułów, ilości treści oraz dodatkowych wymagań. Dlatego nie mamy jednej sztywnej stawki. Opowiedz nam o swoim evencie, a przygotujemy indywidualną, przejrzystą wycenę bez ukrytych kosztów.',
+          en: 'The price depends on the chosen package and scope - the number of modules, the amount of content and any additional requirements. That\'s why we don\'t have a single fixed rate. Tell us about your event and we\'ll prepare an individual, transparent quote with no hidden costs.',
+        },
+      },
+      {
+        q: { pl: 'Na jakich platformach działa aplikacja?', en: 'Which platforms does the app run on?' },
+        a: {
+          pl: 'Dostarczamy natywną aplikację na iOS i Android. Uczestnicy pobierają ją z App Store lub Google Play na swój telefon - działa na obu systemach tak samo.',
+          en: 'We deliver a native app for iOS and Android. Attendees download it from the App Store or Google Play onto their phone - it works the same on both systems.',
+        },
+      },
+      {
+        q: { pl: 'Czy mogę samodzielnie aktualizować treści w trakcie trwania eventu?', en: 'Can I update content myself during the event?' },
+        a: {
+          pl: 'Tak. Otrzymujesz panel administracyjny, w którym samodzielnie zarządzasz agendą, prelegentami i aktualnościami. Zmiany trafiają do uczestników od razu, a dzięki push notyfikacjom możesz błyskawicznie poinformować ich o zmianie planu - bez angażowania naszego zespołu.',
+          en: 'Yes. You get an admin panel where you manage the agenda, speakers and announcements yourself. Changes reach attendees instantly, and thanks to push notifications you can immediately inform them about schedule changes - without involving our team.',
+        },
+      },
+      {
+        q: { pl: 'Czy uczestnicy płacą za aplikację?', en: 'Do attendees pay for the app?' },
+        a: {
+          pl: 'Nie. Dla uczestników pobranie i korzystanie z aplikacji jest bezpłatne. Koszt aplikacji ponosi organizator w ramach wybranego pakietu - uczestnicy po prostu pobierają ją ze sklepu i logują się na Twój event.',
+          en: 'No. For attendees, downloading and using the app is free. The cost is covered by the organizer within the chosen package - attendees simply download it from the store and access your event.',
+        },
+      },
+      {
+        q: { pl: 'Czy aplikacja może być dostępna dla uczestników w kilku językach?', en: 'Can the app be available to attendees in multiple languages?' },
+        a: {
+          pl: 'Tak, dzięki modułowi wielojęzyczności aplikacja może być dostępna w kilku językach jednocześnie - każdy uczestnik wybiera swój język w ustawieniach. To idealne rozwiązanie dla eventów międzynarodowych. Zakres języków ustalamy wspólnie na etapie konfiguracji.',
+          en: 'Yes, with the multi-language module the app can be available in several languages at once - each attendee picks their language in the settings. It\'s a perfect fit for international events. We agree on the set of languages together during configuration.',
+        },
       },
     ],
   },

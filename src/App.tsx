@@ -7,6 +7,7 @@ import HowItWorks from './components/HowItWorks';
 import AppShowcase from './components/AppShowcase';
 import Features from './components/Features';
 import Modules from './components/Modules';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -45,6 +46,7 @@ export default function App() {
           <AppShowcase />
           <Features />
           <Modules />
+          <FAQ />
           <Contact />
         </main>
         <Footer />
