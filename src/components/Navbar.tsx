@@ -32,6 +32,7 @@ export default function Navbar() {
   const navLinks = [
     { id: 'features', label: tr(t.nav.features) },
     { id: 'modules', label: tr(t.nav.modules) },
+    { id: 'faq', label: tr(t.nav.faq) },
     { id: 'contact', label: tr(t.nav.contact) },
   ];
 
