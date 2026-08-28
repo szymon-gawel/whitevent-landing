@@ -128,8 +128,8 @@ export default function Terms() {
         </h2>
         <p className="text-gray-700 leading-relaxed">
           Reklamacje dotyczące funkcjonowania Platformy można zgłaszać na adres e-mail{' '}
-          <a href="mailto:szymon.gawel@sgsoftware.pl" className="underline">
-            szymon.gawel@sgsoftware.pl
+          <a href="mailto:whitevent@sgsoftware.pl" className="underline">
+            whitevent@sgsoftware.pl
           </a>{' '}
           z opisem zgłaszanego problemu. Usługodawca rozpatruje reklamacje w terminie
           [uzupełnić: np. 14 dni roboczych] od dnia otrzymania zgłoszenia i informuje

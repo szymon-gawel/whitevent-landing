@@ -142,6 +142,16 @@ export default function Contact() {
                 </div>
               ))}
             </div>
+
+            <p className="text-gray-400 text-sm mt-10">
+              {tr(t.contact.directEmail)}{' '}
+              <a
+                href={`mailto:${tr(t.contact.email)}`}
+                className="text-amber-500 hover:text-amber-400 transition-colors font-medium"
+              >
+                {tr(t.contact.email)}
+              </a>
+            </p>
           </div>
 
           <div

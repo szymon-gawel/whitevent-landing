@@ -172,6 +172,8 @@ export const t = {
     label: { pl: 'Kontakt', en: 'Contact' },
     headline: { pl: 'Zamów demo', en: 'Request a demo' },
     subtext: { pl: 'Porozmawiajmy o Twoim evencie. Wspólnie dobierzemy odpowiednie funkcje i przygotujemy wycenę', en: "Let's talk about your event. Together we'll select the right features and prepare a quote" },
+    directEmail: { pl: 'Wolisz e-mail? Napisz bezpośrednio na', en: 'Prefer email? Write to us directly at' },
+    email: { pl: 'whitevent@sgsoftware.pl', en: 'whitevent@sgsoftware.pl' },
     fields: {
       name: { pl: 'Imię i nazwisko', en: 'Full name' },
       namePlaceholder: { pl: 'Jan Kowalski', en: 'John Smith' },

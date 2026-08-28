@@ -23,15 +23,15 @@ export default function PrivacyPolicy() {
           Warszawa, Polska
           <br />
           E-mail:{' '}
-          <a href="mailto:szymon.gawel@sgsoftware.pl" className="underline">
-            szymon.gawel@sgsoftware.pl
+          <a href="mailto:whitevent@sgsoftware.pl" className="underline">
+            whitevent@sgsoftware.pl
           </a>
         </p>
         <p className="text-gray-700 leading-relaxed mt-3">
           Jeśli masz pytania dotyczące przetwarzania Twoich danych osobowych, skontaktuj się z nami
           pod adresem:{' '}
-          <a href="mailto:szymon.gawel@sgsoftware.pl" className="underline">
-            szymon.gawel@sgsoftware.pl
+          <a href="mailto:whitevent@sgsoftware.pl" className="underline">
+            whitevent@sgsoftware.pl
           </a>
         </p>
 
@@ -209,8 +209,8 @@ export default function PrivacyPolicy() {
         </ul>
         <p className="text-gray-700 leading-relaxed mt-3">
           Aby skorzystać z powyższych praw:{' '}
-          <a href="mailto:szymon.gawel@sgsoftware.pl" className="underline">
-            szymon.gawel@sgsoftware.pl
+          <a href="mailto:whitevent@sgsoftware.pl" className="underline">
+            whitevent@sgsoftware.pl
           </a>
         </p>
         <p className="text-gray-700 leading-relaxed mt-3">
@@ -263,8 +263,8 @@ export default function PrivacyPolicy() {
           <span className="font-semibold">Szymon Gaweł Software Development</span>
           <br />
           E-mail:{' '}
-          <a href="mailto:szymon.gawel@sgsoftware.pl" className="underline">
-            szymon.gawel@sgsoftware.pl
+          <a href="mailto:whitevent@sgsoftware.pl" className="underline">
+            whitevent@sgsoftware.pl
           </a>
           <br />
           Warszawa, Polska
