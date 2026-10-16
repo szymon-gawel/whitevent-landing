@@ -12,7 +12,7 @@ export default function PrivacyPolicy() {
         <h1 className="text-3xl font-bold mb-2" style={{ color: '#1E3A5F' }}>
           Polityka Prywatności
         </h1>
-        <p className="text-sm text-gray-500 mb-8">Ostatnia aktualizacja: sierpień 2026</p>
+        <p className="text-sm text-gray-500 mb-8">Ostatnia aktualizacja: październik 2026</p>
 
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
           1. Administrator danych osobowych
@@ -72,9 +72,18 @@ export default function PrivacyPolicy() {
           <li>Adres e-mail i hasło (do logowania)</li>
           <li>
             Dane profilu uczestnika (imię, nazwisko, firma, stanowisko, opis, link do profilu
-            LinkedIn, informacja czego szukasz w kontaktach networkingowych — wszystkie pola
-            opcjonalne poza imieniem i nazwiskiem)
+            LinkedIn, Facebook, Instagram lub strony internetowej, informacja czego szukasz w
+            kontaktach networkingowych — wszystkie pola opcjonalne poza imieniem i nazwiskiem)
           </li>
+          <li>
+            Treść wiadomości wysyłanych innym uczestnikom w czacie (jeśli organizator wydarzenia
+            włączył tę funkcję) wraz z godziną wysłania i informacją o odczytaniu
+          </li>
+          <li>
+            Dane kontaktowe wymieniane z innymi uczestnikami przez zeskanowanie kodu QR (wyłącznie
+            te pola profilu, które udostępniasz)
+          </li>
+          <li>Zgłoszenia treści naruszających zasady oraz blokady innych uczestników</li>
           <li>Token urządzenia do push notyfikacji</li>
           <li>Zapisy na warsztaty i rezerwacje spotkań</li>
           <li>Oceny sesji i komentarze (opcjonalnie)</li>
@@ -108,6 +117,24 @@ export default function PrivacyPolicy() {
                 </td>
                 <td className="border border-gray-200 p-3">
                   Art. 6 ust. 1 lit. b RODO — wykonanie umowy
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-200 p-3">
+                  Prywatne wiadomości między uczestnikami (czat) i wymiana kontaktów
+                </td>
+                <td className="border border-gray-200 p-3">
+                  Art. 6 ust. 1 lit. b RODO — wykonanie umowy (funkcja networkingu, z której
+                  Uczestnik korzysta z własnej inicjatywy)
+                </td>
+              </tr>
+              <tr>
+                <td className="border border-gray-200 p-3">
+                  Rozpatrywanie zgłoszeń naruszeń i moderacja treści
+                </td>
+                <td className="border border-gray-200 p-3">
+                  Art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes (bezpieczeństwo
+                  Uczestników, wymogi sklepów z aplikacjami)
                 </td>
               </tr>
               <tr>
@@ -168,6 +195,18 @@ export default function PrivacyPolicy() {
           </li>
         </ul>
         <p className="text-gray-700 leading-relaxed mt-3">
+          Powiadomienie push o nowej wiadomości w czacie zawiera imię i nazwisko nadawcy oraz
+          początek treści wiadomości i jest dostarczane za pośrednictwem infrastruktury Expo oraz
+          systemów powiadomień Apple i Google. Powiadomienia możesz wyłączyć w ustawieniach
+          aplikacji.
+        </p>
+        <p className="text-gray-700 leading-relaxed mt-3">
+          Wiadomości czatu są prywatne: widzą je wyłącznie obie strony rozmowy. Organizator
+          wydarzenia ma wgląd tylko w treść wiadomości, którą inny uczestnik zgłosił jako naruszającą
+          zasady. Profil, który udostępniasz w networkingu (w tym linki do mediów społecznościowych),
+          jest widoczny dla innych uczestników wydarzenia, którzy mają włączony networking.
+        </p>
+        <p className="text-gray-700 leading-relaxed mt-3">
           Nie sprzedajemy Twoich danych osobowych żadnym podmiotom trzecim.
         </p>
 
@@ -187,6 +226,11 @@ export default function PrivacyPolicy() {
           <li>
             Dane kont użytkowników aplikacji — przez czas trwania konta; po usunięciu usuwane w
             ciągu 30 dni
+          </li>
+          <li>
+            Wiadomości czatu — usuwane automatycznie po upływie 30 dni od zakończenia wydarzenia
+            (organizator może ustawić inny okres), a także po usunięciu konta przez którąkolwiek ze
+            stron rozmowy
           </li>
           <li>Dane analityczne — anonimowe, przechowywane do 90 dni</li>
           <li>Korespondencja e-mail — przez okres 5 lat</li>

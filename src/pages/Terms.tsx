@@ -69,7 +69,7 @@ export default function Terms() {
           <li>zakładanie i prowadzenie Konta Uczestnika;</li>
           <li>generowanie i weryfikację biletów elektronicznych (kod QR, kod zapasowy);</li>
           <li>umożliwianie zapisów na warsztaty w ramach dostępnych miejsc;</li>
-          <li>umożliwianie networkingu — przeglądania profili innych Uczestników oraz umawiania spotkań, w zakresie w jakim Uczestnik udostępnił swoje dane w tym celu;</li>
+          <li>umożliwianie networkingu — przeglądania profili innych Uczestników oraz umawiania spotkań, prywatnej korespondencji w czacie oraz wymiany kontaktów, w zakresie w jakim Uczestnik udostępnił swoje dane w tym celu;</li>
           <li>wysyłkę powiadomień push związanych z wydarzeniem, zgodnie z ustawieniami zgód Uczestnika;</li>
           <li>dla Organizatorów — panel administracyjny do zarządzania treścią wydarzenia i listą uczestników.</li>
         </ul>
@@ -120,7 +120,7 @@ export default function Terms() {
           <li>Uczestnik zobowiązany jest do podawania danych zgodnych z prawdą oraz korzystania z Platformy w sposób zgodny z prawem i dobrymi obyczajami.</li>
           <li>Uczestnik zobowiązany jest do zachowania poufności danych logowania do swojego Konta.</li>
           <li>Usługodawca dokłada starań, aby Platforma działała nieprzerwanie, zastrzegając możliwość czasowych przerw technicznych, w tym w celu przeprowadzenia konserwacji lub aktualizacji.</li>
-          <li>Zabronione jest dostarczanie przez Uczestnika treści o charakterze bezprawnym.</li>
+          <li>Zabronione jest dostarczanie przez Uczestnika treści o charakterze bezprawnym, w tym obraźliwych, nękających, nienawistnych lub naruszających prawa osób trzecich, także w wiadomościach prywatnych. Uczestnik może zgłosić treść lub zablokować innego Uczestnika w Aplikacji; zgłoszenia są rozpatrywane, a treści i konta naruszające zasady usuwane lub zawieszane.</li>
         </ol>
 
         <h2 className="text-xl font-semibold mt-10 mb-3" style={{ color: '#1E3A5F' }}>
