@@ -65,6 +65,10 @@ export const t = {
         title: { pl: 'Panel administracyjny', en: 'Admin panel' },
         desc: { pl: 'Pełna kontrola nad treścią aplikacji. Zarządzaj agendą, prelegentami i aktualnościami samodzielnie - bez angażowania naszego zespołu', en: 'Full control over app content. Manage agenda, speakers and announcements independently - without involving our team' },
       },
+      {
+        title: { pl: 'Twój brand i tryb ciemny', en: 'Your brand & dark mode' },
+        desc: { pl: 'Logo, ikona, ekran startowy i paleta kolorów w barwach Twojego eventu - w jasnym i ciemnym motywie. Uczestnicy widzą Twoją aplikację, nie naszą', en: "Logo, app icon, splash screen and colour palette in your event's colours - in both light and dark themes. Attendees see your app, not ours" },
+      },
     ],
   },
   modules: {
@@ -74,7 +78,7 @@ export const t = {
     items: [
       {
         title: { pl: 'Networking', en: 'Networking' },
-        desc: { pl: 'Lista uczestników z profilami, kontaktem przez email i LinkedIn oraz umawianiem spotkań 1:1 na wybrany termin. Uczestnicy budują relacje biznesowe przed, w trakcie i po evencie', en: 'Attendee list with profiles, contact via email and LinkedIn, and 1:1 meeting scheduling with time slots. Attendees build business relationships before, during and after the event' },
+        desc: { pl: 'Lista uczestników z profilami, linkami do LinkedIn, Facebooka i Instagrama oraz umawianiem spotkań 1:1 na wybrany termin. Uczestnicy budują relacje biznesowe przed, w trakcie i po evencie', en: 'Attendee list with profiles, LinkedIn, Facebook and Instagram links, and 1:1 meeting scheduling with time slots. Attendees build business relationships before, during and after the event' },
       },
       {
         title: { pl: 'Wystawcy', en: 'Exhibitors' },
@@ -99,6 +103,26 @@ export const t = {
       {
         title: { pl: 'Wielojęzyczność', en: 'Multi-language' },
         desc: { pl: 'Aplikacja dostępna dla uczestników w wielu językach jednocześnie - każdy wybiera swój w ustawieniach. Idealne dla eventów międzynarodowych', en: 'The app is available to attendees in multiple languages at once - everyone picks their own in settings. Perfect for international events' },
+      },
+      {
+        title: { pl: 'Czat 1:1', en: '1:1 chat' },
+        desc: { pl: 'Prywatne wiadomości między uczestnikami networkingu, na żywo i z powiadomieniami. Organizator ustala, jak długo wiadomości są przechowywane, a uczestnicy mogą blokować i zgłaszać nadużycia', en: 'Private messages between networking attendees, live and with notifications. The organizer decides how long messages are kept, and attendees can block and report abuse' },
+      },
+      {
+        title: { pl: 'Wymiana kontaktów QR', en: 'QR contact exchange' },
+        desc: { pl: 'Uczestnicy wymieniają się danymi kontaktowymi skanując swoje kody QR - bez wpisywania numerów i wizytówek. Kontakt można zapisać od razu w książce adresowej telefonu', en: "Attendees swap contact details by scanning each other's QR codes - no typing numbers, no business cards. A contact can be saved straight to the phone's address book" },
+      },
+      {
+        title: { pl: 'Sondy i Q&A na żywo', en: 'Live polls & Q&A' },
+        desc: { pl: 'Sondy i pytania od publiczności w trakcie sesji. Uczestnicy głosują i zadają pytania z telefonu, a prowadzący od razu widzi odpowiedzi', en: 'Polls and audience questions during sessions. Attendees vote and ask questions from their phones, and the host sees the results right away' },
+      },
+      {
+        title: { pl: 'Ekran główny', en: 'Home screen' },
+        desc: { pl: 'Pierwszy ekran aplikacji: trwająca i następna sesja, nadchodzące spotkania oraz Twój baner z ofertą lub hasłem eventu - prowadzący do wybranej strony', en: "The app's first screen: the session on now and the next one, upcoming meetings and your own banner with an offer or event slogan - linking to a page of your choice" },
+      },
+      {
+        title: { pl: 'Dojazd na miejsce', en: 'Venue navigation' },
+        desc: { pl: 'Wpisujesz adres miejsca eventu w panelu, a uczestnik jednym dotknięciem otwiera trasę w swojej aplikacji map - Apple Maps lub Google Maps', en: 'You enter the venue address in the admin panel, and attendees open directions in their maps app with a single tap - Apple Maps or Google Maps' },
       },
     ],
   },
@@ -136,6 +160,13 @@ export const t = {
         a: {
           pl: 'Cena zależy od wybranego pakietu i zakresu - liczby modułów, ilości treści oraz dodatkowych wymagań. Dlatego nie mamy jednej sztywnej stawki. Opowiedz nam o swoim evencie, a przygotujemy indywidualną, przejrzystą wycenę bez ukrytych kosztów.',
           en: 'The price depends on the chosen package and scope - the number of modules, the amount of content and any additional requirements. That\'s why we don\'t have a single fixed rate. Tell us about your event and we\'ll prepare an individual, transparent quote with no hidden costs.',
+        },
+      },
+      {
+        q: { pl: 'Czy aplikacja będzie wyglądać jak nasza marka?', en: 'Will the app look like our brand?' },
+        a: {
+          pl: 'Tak. Aplikacja jest wydawana w sklepach pod Twoją nazwą, z Twoim logo, ikoną i ekranem startowym. Dopasowujemy też kolory interfejsu - w jasnym i ciemnym motywie - oraz wybrane teksty. Uczestnicy widzą aplikację Twojego eventu, a nie produkt zewnętrznej firmy.',
+          en: "Yes. The app is published in the stores under your name, with your logo, icon and splash screen. We also match the interface colours - in both light and dark themes - and selected texts. Attendees see your event's app, not a third-party product.",
         },
       },
       {
