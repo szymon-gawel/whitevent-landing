@@ -58,6 +58,12 @@ export default function Navbar() {
                 {label}
               </button>
             ))}
+            <a
+              href="/book"
+              className="text-gray-300 hover:text-white text-sm font-medium transition-colors duration-200"
+            >
+              {tr(t.nav.book)}
+            </a>
           </div>
 
           <div className="flex items-center gap-3">
@@ -113,7 +119,7 @@ export default function Navbar() {
 
       <div
         className={`md:hidden overflow-hidden transition-all duration-300 ${
-          mobileOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+          mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
         }`}
         style={{ background: 'rgba(15, 31, 52, 0.97)', backdropFilter: 'blur(12px)' }}
       >
@@ -127,6 +133,12 @@ export default function Navbar() {
               {label}
             </button>
           ))}
+          <a
+            href="/book"
+            className="block w-full text-left text-gray-300 hover:text-white px-3 py-2.5 rounded-md text-sm font-medium hover:bg-white/5 transition-colors"
+          >
+            {tr(t.nav.book)}
+          </a>
           <div className="pt-2">
             <button
               onClick={() => { track('cta_click', { location: 'navbar_mobile' }); scrollTo('contact'); }}

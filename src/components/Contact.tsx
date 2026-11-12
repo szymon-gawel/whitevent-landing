@@ -143,7 +143,15 @@ export default function Contact() {
               ))}
             </div>
 
-            <p className="text-gray-400 text-sm mt-10">
+            <a
+              href="/book"
+              onClick={() => track('cta_click', { location: 'contact_book' })}
+              className="inline-flex items-center mt-10 border border-amber-500 text-amber-500 hover:bg-amber-500 hover:text-navy-deeper font-semibold px-5 py-2.5 rounded-md text-sm transition-all duration-200"
+            >
+              {tr(t.nav.book)}
+            </a>
+
+            <p className="text-gray-400 text-sm mt-6">
               {tr(t.contact.directEmail)}{' '}
               <a
                 href={`mailto:${tr(t.contact.email)}`}

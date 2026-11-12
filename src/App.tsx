@@ -12,6 +12,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Terms from './pages/Terms';
+import Booking from './pages/Booking';
 
 const path = window.location.pathname;
 
@@ -33,6 +34,16 @@ export default function App() {
         <Analytics />
         <SpeedInsights />
       </>
+    );
+  }
+
+  if (path === '/book') {
+    return (
+      <LanguageProvider>
+        <Booking />
+        <Analytics />
+        <SpeedInsights />
+      </LanguageProvider>
     );
   }
 

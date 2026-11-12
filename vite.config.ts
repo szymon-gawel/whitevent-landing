@@ -7,7 +7,7 @@ export default defineConfig({
     react(),
     sitemap({
       hostname: 'https://whitevent.com',
-      routes: ['/', '/privacy-policy'],
+      routes: ['/', '/book', '/privacy-policy'],
     }),
   ],
   server: {

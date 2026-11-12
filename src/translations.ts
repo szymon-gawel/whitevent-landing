@@ -7,6 +7,24 @@ export const t = {
     faq: { pl: 'FAQ', en: 'FAQ' },
     contact: { pl: 'Kontakt', en: 'Contact' },
     cta: { pl: 'Zamów demo', en: 'Request demo' },
+    book: { pl: 'Umów spotkanie', en: 'Book a call' },
+  },
+  booking: {
+    label: { pl: 'Spotkanie', en: 'Meeting' },
+    headline: { pl: 'Umów spotkanie', en: 'Book a meeting' },
+    subtext: {
+      pl: 'Wybierz dogodny termin na rozmowę o Twoim evencie. Pokażemy aplikację na żywo i dobierzemy odpowiednie moduły',
+      en: "Pick a time that suits you to talk about your event. We'll show the app live and help you choose the right modules",
+    },
+    points: [
+      { pl: '30 minut rozmowy online, bez zobowiązań', en: '30 minutes online, no obligation' },
+      { pl: 'Pokaz aplikacji na żywo, w tym agenda, networking i panel organizatora', en: 'Live app walkthrough, including agenda, networking and the organizer panel' },
+      { pl: 'Dobór modułów i orientacyjna wycena pod Twój event', en: 'Module selection and an indicative quote for your event' },
+    ],
+    back: { pl: '← Powrót do strony głównej', en: '← Back to home page' },
+    openExternal: { pl: 'Kalendarz się nie ładuje? Otwórz w nowej karcie', en: 'Calendar not loading? Open in a new tab' },
+    notConfigured: { pl: 'Kalendarz nie jest jeszcze skonfigurowany.', en: 'The calendar is not configured yet.' },
+    contactCta: { pl: 'Wolisz napisać? Przejdź do formularza kontaktowego', en: 'Prefer to write? Go to the contact form' },
   },
   hero: {
     badge: { pl: 'Aplikacja iOS & Android', en: 'iOS & Android app' },
